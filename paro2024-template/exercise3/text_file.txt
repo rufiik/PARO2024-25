@@ -1,0 +1,28 @@
+ANSWER:
+
+User Scenarios:
+1. As a player, I can roll the dice to move my token around the board.
+2. As a player, I can buy properties when I land on them if they are not already owned.
+3. As a player, I can pay rent to the owner of a property when I land on it.
+4. As a player, I can draw a Chance or Community Chest card when I land on the respective spaces.
+
+Acceptance Tests:
+1. GIVEN it is my turn,
+   WHEN I roll the dice,
+   THEN my token should move forward the number of spaces shown on the dice.
+
+2. GIVEN I land on an unowned property,
+   WHEN I choose to buy the property,
+   THEN the property should be marked as owned by me,
+   AND the cost of the property should be deducted from my balance.
+
+3. GIVEN I land on a property owned by another player,
+   WHEN I land on the property,
+   THEN I should pay the rent amount to the owner,
+   AND the rent amount should be deducted from my balance,
+   AND the rent amount should be added to the owner's balance.
+
+4. GIVEN I land on a Chance or Community Chest space,
+   WHEN I draw a card,
+   THEN the card's instructions should be executed,
+   AND any changes to my balance or position should be applied as per the card's instructions.
